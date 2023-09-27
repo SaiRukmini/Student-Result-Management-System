@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin login page</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--Get your code at fontawesome.com-->
+</head>
+
+<body>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">&#8801;</button>
+    <div id="myDropdown" class="dropdown-content">
+      <ul class="nav">
+        <li>
+          <a href="home.html">
+            <i class="fa fa-fw fa-home" style="font-size:40px;" id="icon">
+              <div class="circle"></div>
+            </i>
+            <div class="title">Home</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="admin.html">
+            <i class="fa fa-fw fa-user" style="font-size:40px" id="icon">
+              <div class="circle"></div>
+            </i>
+            <div class="title">Admin</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://codepen.io/ladyjellington">
+            <i class="fa fa-fw fa-envelope" style="font-size:40px" id="icon">
+              <div class="circle"></div>
+            </i>
+            <div class="title">Contact</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="user.html">
+            <i class="fa fa-fw fa-user" style="font-size:40px" id="icon">
+              <div class="circle"></div>
+            </i>
+            <div class="title">Login</div>
+          </a>
+        </li>
+        <div class="background"></div>
+
+      </ul>
+    </div>
+  </div>
+</div>
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+  <div class="login-box">
+    <h2>Login</h2>
+    <form action="adminnew.php" method="post">
+      <div class="user-box">
+        <input type="text" name="uname" required="">
+        <label>Admin</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="password" required="">
+        <label>Password</label>
+      </div>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <button id="bt">Submit</button>
+      </a>
+    </form>
+  </div>
+</body>
+
+</html>

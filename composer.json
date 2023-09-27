@@ -1,0 +1,5 @@
+{
+    "require": {
+        "yeldarb/spreadsheet-reader": "^2.0"
+    }
+}
